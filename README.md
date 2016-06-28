@@ -2,9 +2,9 @@
 
 My code samples for the Visual Studio Live conference 2016 (Boston MA)
 
-# Presentation details, Slides, Video
+# Presentation details, Slides
 
-You can see the video recording and the slides here:
+You can see the details and the slides here:
 
 http://galasoft.ch/presentations/presentationdetails.cshtml?name=2016011
 
