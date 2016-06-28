@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfGraphics.ChoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfGraphics"
+        mc:Ignorable="d"
+        Title="ChoiceWindow"
+        Height="500"
+        Width="200">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Height"
+                    Value="60" />
+            <Setter Property="Margin"
+                    Value="10" />
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+
+        <Button Content="Image Brush"
+                x:Name="ImageBrushButton"
+                Click="ButtonClick"
+                Style="{DynamicResource ButtonStyle}" />
+
+        <Button Content="Video Brush"
+                x:Name="VideoBrushButton"
+                Click="ButtonClick"
+                Style="{DynamicResource ButtonStyle}" />
+
+        <Button Content="Non-rectangular Clip"
+                x:Name="ClipButton"
+                Click="ButtonClick"
+                Style="{DynamicResource ButtonStyle}" />
+
+        <Button Content="Mirror"
+                x:Name="MirrorButton"
+                Click="ButtonClick"
+                Style="{DynamicResource ButtonStyle}" />
+    </StackPanel>
+</Window>

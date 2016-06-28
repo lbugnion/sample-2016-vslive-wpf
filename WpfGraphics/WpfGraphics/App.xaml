@@ -1,0 +1,8 @@
+﻿<Application x:Class="WpfGraphics.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="ChoiceWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,130 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        x:Class="WpfGraphics.FourthWindow"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        mc:Ignorable="d ignore"
+        Title="ThirdWindow"
+        Height="800"
+        Width="935.6"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="{x:Null}">
+    <Window.Resources>
+        <Storyboard x:Key="BallDropStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                                           Storyboard.TargetName="Ball">
+                <EasingDoubleKeyFrame KeyTime="0:0:1"
+                                      Value="266">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BounceEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Grid x:Name="MainElement"
+              Margin="0,0,146,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="Black"
+                                  Offset="1" />
+                    <GradientStop Color="#FFABABAB" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            
+            <Ellipse x:Name="Ball"
+                     Height="124"
+                     Margin="0,10,117.4,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Right"
+                     Width="124"
+                     RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+                
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.783,0.85">
+                        <GradientStop Color="Orange"
+                                      Offset="0.003" />
+                        <GradientStop Color="Red"
+                                      Offset="1" />
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+                
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <ei:ControlStoryboardAction Storyboard="{StaticResource BallDropStoryboard}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Ellipse>
+            
+            <TextBox Margin="37.8,59,316.6,0"
+                     Text="Enter a text..."
+                     RenderTransformOrigin="0.5,0.5"
+                     FontFamily="Segoe UI Black"
+                     FontSize="48"
+                     Height="71">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </Grid>
+
+        <Rectangle Grid.Row="1"
+                   RenderTransformOrigin="0.5,0.5"
+                   Margin="-41.373,0,187,180">
+            <Rectangle.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,0"
+                                     StartPoint="0.5,1">
+                    <GradientStop Color="#CC000000"
+                                  Offset="0" />
+                    <GradientStop Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.OpacityMask>
+            
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"
+                                    ScaleX="1" />
+                    <SkewTransform AngleY="0"
+                                   AngleX="33.842" />
+                    <RotateTransform Angle="0" />
+                    <TranslateTransform X="115.129" />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <VisualBrush Visual="{Binding ElementName=MainElement}" />
+            </Rectangle.Fill>
+
+        </Rectangle>
+        
+        <Rectangle Height="2"
+                   VerticalAlignment="Bottom"
+                   Fill="White"
+                   Margin="0,0,146,0" />
+    </Grid>
+</Window>
