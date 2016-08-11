@@ -6,7 +6,11 @@ My code samples for the Visual Studio Live conference 2016 (Boston MA)
 
 You can see the details and the slides here:
 
+Boston
 http://galasoft.ch/presentations/presentationdetails.cshtml?name=2016011
+
+Redmond
+http://galasoft.ch/presentations/presentationdetails.cshtml?name=TODO
 
 # Content
 
