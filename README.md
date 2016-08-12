@@ -1,6 +1,6 @@
 # Windows Presentation Foundation (WPF) 4.6
 
-My code samples for the Visual Studio Live conference 2016 (Boston MA)
+My code samples for the Visual Studio Live conference 2016 (Boston MA / Redmond WA)
 
 # Presentation details, Slides
 
@@ -10,7 +10,7 @@ Boston
 http://galasoft.ch/presentations/presentationdetails.cshtml?name=2016011
 
 Redmond
-http://galasoft.ch/presentations/presentationdetails.cshtml?name=TODO
+http://galasoft.ch/presentations/presentationdetails.cshtml?name=2016013
 
 # Content
 
